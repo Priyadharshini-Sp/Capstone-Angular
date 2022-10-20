@@ -1,0 +1,48 @@
+
+<nav class="navbar navbar-light bg-primary">
+    <div class="container-fluid">
+    <h1 style="color: aliceblue;">ListOfCars</h1>
+    <div class="d-flex">
+       
+			
+			 
+			  <ul class="nav justify-content-end ms-auto  ">
+                <li class="nav-item">
+                    <a class="nav-link"  aria-current="page" href="viewcar"><h4 style="color: white;">ViewCarDetails</h4></a>
+                  </li>
+				<li class="nav-item">
+				  <a class="nav-link"  aria-current="page" href="/addcar"><h4 style="color: white;">AddCarDetails</h4></a>
+				</li>
+                <li class="nav-item">
+                    <a class="nav-link"  aria-current="page" href="form"><h4 style="color: white;">InterstedForm</h4></a>
+                  </li>
+				</ul>
+			</div>
+			
+		  
+       
+   
+    </div>
+    </nav>
+    <table class="table mt-3" [ngStyle]="{backgroundImage:'url(./assets/images/3.png)'}">
+    <thead>
+    <tr>
+        <th scope="col">Name</th>
+    <th scope="col">Carname</th>
+    <th scope="col">Description</th>
+   
+    
+    </tr>
+    </thead>
+    <tbody>
+        <tr >
+            <td>{{form.name}}</td>
+            <td>{{form.carname}}</td>
+            <td>{{form.desc}}</td>
+            
+         </tr>
+        </tbody>
+    </table>
+    
+
+

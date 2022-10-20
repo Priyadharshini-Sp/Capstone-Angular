@@ -1,0 +1,59 @@
+
+<nav class="navbar navbar-light bg-danger">
+    <div class="container-fluid">
+    <h1 style="color: aliceblue;">ListOfCars</h1>
+    <div class="d-flex">
+       
+			
+			 
+			  <ul class="nav justify-content-end ms-auto  ">
+                <li class="nav-item">
+                    <a class="nav-link"  aria-current="page" href="viewcar"><h4 style="color: white;">ViewCarDetails</h4></a>
+                  </li>
+				<li class="nav-item">
+				  <a class="nav-link"  aria-current="page" href="/addcar"><h4 style="color: white;">AddCarDetails</h4></a>
+				</li>
+				<li class="nav-item" >
+				  <a class="nav-link "   href="/viewuser"><h4 style="color: white;">Viewuser</h4></a>
+				</li>
+                <li class="nav-item" >
+                    <a class="nav-link "   href="/addcar"><h4 style="color: white;">AddUserDetails</h4></a>
+                  </li>
+				</ul>
+			</div>
+			
+		  
+       
+   
+    </div>
+    </nav>
+    <table class="table mt-3" [ngStyle]="{backgroundImage:'url(./assets/images/bg.png)'} ">
+    <thead>
+    <tr>
+        
+    <th scope="col"> CarName</th>
+    <th scope="col"> Description </th>
+    <th scope="col"> Price</th>
+    <th scope="col">Offers</th>
+    <th scope="col">Location</th>
+    <th scope="col">Owner</th>
+    <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let car of cars">
+            
+            <td>{{car.carName}}</td>
+            <td>{{car.desc}}</td>
+            <td>{{car.price}}</td>
+            <td>{{car.offers}}</td>
+            <td>{{car.location}}</td>
+            <td>{{car.owner}}</td>
+            <td>
+                <button type="button" (click)="onEdit(car)"   class="btn  btn-info" >Edit</button>
+                <button type="button" (click)="deleteCar(car.carId)" class="btn btn-danger mx-3">Delete</button>
+            </td>
+         </tr>
+        </tbody>
+    </table>
+    

@@ -1,0 +1,56 @@
+
+<nav class="navbar navbar-light bg-danger">
+    <div class="container-fluid">
+    <h1 style="color: aliceblue;">ListOfCars</h1>
+    <div class="d-flex">
+       
+			
+			 
+			  <ul class="nav justify-content-end ms-auto  ">
+                <li class="nav-item">
+                    <a class="nav-link"  aria-current="page" href="viewcar"><h4 style="color: white;">ViewCarDetails</h4></a>
+                  </li>
+				<li class="nav-item">
+				  <a class="nav-link"  aria-current="page" href="/addcar"><h4 style="color: white;">AddCarDetails</h4></a>
+				</li>
+				<li class="nav-item" >
+				  <a class="nav-link "   href="/viewuser"><h4 style="color: white;">Viewuser</h4></a>
+				</li>
+				</ul>
+			</div>
+			
+		  
+       
+   
+    </div>
+    </nav>
+    <table class="table mt-3" [ngStyle]="{backgroundImage:'url(./assets/images/bg6.png)'}">
+    <thead>
+    <tr>
+      
+    <th scope="col"> UserName</th>
+    <th scope="col">Password</th>
+    <th scope="col">Email</th>
+    <th scope="col">Location</th>
+    <th scope="col">Contact</th>
+    <th scope="col">Actions</th>
+    
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            
+            <td>{{user.username}}</td>
+            <td>{{user.password}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.location}}</td>
+            <td>{{user.contact}}</td>
+            <td>
+                <button type="button" (click)="Edit()"   class="btn  btn-info"  >Edit</button>
+                <button type="button" (click)="delete(user.userid)" class="btn btn-danger mx-3">Delete</button>
+            </td> 
+         </tr>
+        </tbody>
+    </table>
+    
+
